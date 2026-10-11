@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net462;net8.0-windows</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>PrintHelper.Windows</AssemblyName>
+    <RootNamespace>PrintHelper</RootNamespace>
+    <PackageId>PrintHelper.Windows</PackageId>
+    <Description>Windows printer support for PrintHelper (engine.Print()). Works from WPF, WinForms, services and console apps.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrintHelper.Core\PrintHelper.Core.csproj" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net462'">
+    <Reference Include="System.Drawing" />
+  </ItemGroup>
+
+</Project>

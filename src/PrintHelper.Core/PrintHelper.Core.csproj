@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <!-- netstandard2.0 = usable from .NET Framework 4.6.1+, .NET Core, .NET 5+, WPF, WinForms, ASP.NET, console -->
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>PrintHelper.Core</AssemblyName>
+    <RootNamespace>PrintHelper</RootNamespace>
+    <PackageId>PrintHelper.Core</PackageId>
+    <Description>Report engine: visual-report model, SQL/list data binding, formulas, grouping, RTL (Persian, Kurdish, Arabic) text shaping, PDF and Excel export.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
+    <PackageReference Include="SkiaSharp" Version="2.88.9" />
+    <PackageReference Include="SkiaSharp.HarfBuzz" Version="2.88.9" />
+    <PackageReference Include="ClosedXML" Version="0.104.2" />
+    <PackageReference Include="System.Drawing.Common" Version="8.0.10" />
+  </ItemGroup>
+
+</Project>

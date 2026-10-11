@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>PrintHelper.Designer</AssemblyName>
+    <RootNamespace>PrintHelper.Designer</RootNamespace>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>PrintHelper.Designer</PackageId>
+    <Description>WinForms visual report designer and preview for PrintHelper. Also hostable in WPF (see PrintHelper.Wpf).</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrintHelper.Core\PrintHelper.Core.csproj" />
+    <ProjectReference Include="..\PrintHelper.Windows\PrintHelper.Windows.csproj" />
+  </ItemGroup>
+
+</Project>

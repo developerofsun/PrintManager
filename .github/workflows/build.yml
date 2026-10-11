@@ -1,0 +1,21 @@
+name: build
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 8.0.x
+      - name: Build everything (net462/net48/net8)
+        run: dotnet build PrintHelper.sln -c Release
+      - name: Engine tests (shaping, formulas, grouping, PDF/Excel)
+        run: dotnet run --project tests/SmokeTest -c Release --no-build -- out
+      - name: Designer tests (undo/redo, cross-band drag, fonts)
+        run: dotnet run --project tests/DesignerTest -c Release --no-build -- out

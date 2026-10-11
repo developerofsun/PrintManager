@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>net48;net8.0-windows</TargetFrameworks>
+    <LangVersion>latest</LangVersion>
+    <AssemblyName>PrintHelper.Wpf</AssemblyName>
+    <RootNamespace>PrintHelper.Wpf</RootNamespace>
+    <UseWPF>true</UseWPF>
+    <UseWindowsForms>true</UseWindowsForms>
+    <PackageId>PrintHelper.Wpf</PackageId>
+    <Description>WPF controls for PrintHelper: report preview control and a designer host (WindowsFormsHost).</Description>
+  </PropertyGroup>
+
+  <ItemGroup Condition="'$(TargetFramework)' == 'net48'">
+    <Reference Include="System.Printing" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\PrintHelper.Designer\PrintHelper.Designer.csproj" />
+  </ItemGroup>
+
+</Project>
